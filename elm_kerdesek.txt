@@ -1,0 +1,260 @@
+**Java bevezető, változók, operátorok**
+
+1.  **Kérdés:** Mi a különbség a gépi kód és a Java bájtkód között?
+    **Válasz:** A gépi kód a számítógép által közvetlenül végrehajtható bináris utasítások sorozata, míg a Java bájtkód egy platformfüggetlen köztes kód, amelyet a Java Virtual Machine (JVM) hajt végre. [cite: 1]
+
+2.  **Kérdés:** Milyen jellemzőkkel rendelkezik a Java magas szintű nyelv?
+    **Válasz:**
+
+      * Egyszerű
+      * Objektumorientált
+      * Elosztott
+      * Értelmezett
+      * Robusztus
+      * Biztonságos
+      * Architektúrafüggetlen
+      * Hordozható
+      * Nagy teljesítményű
+      * Többszálú
+      * Dinamikus [cite: 2]
+
+3.  **Kérdés:** Mik a Java platform fő komponensei?
+    **Válasz:**
+
+      * Java Development Kit (JDK)
+      * Java Virtual Machine (JVM)
+      * Java Runtime Environment (JRE) [cite: 3]
+
+4.  **Kérdés:** Mit jelent a JVM rövidítés?
+    **Válasz:** Java Virtual Machine [cite: 4]
+
+5.  **Kérdés:** Mi a JVM lényege?
+    **Válasz:** A JVM lényege, hogy lehetővé teszi a Java bájtkód futtatását különböző platformokon anélkül, hogy újra kellene fordítani. [cite: 3]
+
+6.  **Kérdés:** Mi a különbség a változó deklarációja és definíciója között?
+    **Válasz:** A változó deklarációja a változó nevének és típusának megadása, míg a változó definíciója a változóhoz érték rendelése.
+
+7.  **Kérdés:** Milyen primitív típusai vannak a Java-nak?
+    **Válasz:** byte, short, int, long, float, double, boolean, char [cite: 3]
+
+8.  **Kérdés:** Mondjon példákat referencia típusokra\!
+    **Válasz:** osztályok, interfészek, tömbök, String [cite: 4]
+
+9.  **Kérdés:** Mit jelent a `final` kulcsszó egy változó esetén?
+    **Válasz:** A `final` kulcsszó egy változó esetén azt jelenti, hogy az értéke nem módosítható a hozzárendelés után. [cite: 4]
+
+10. **Kérdés:** Mi a különbség a Java értékadó utasítása és a matematikai egyenlőség között?
+    **Válasz:** A Java értékadó utasítása egy változóhoz rendel értéket, míg a matematikai egyenlőség két érték azonosságát fejezi ki. [cite: 5]
+
+11. **Kérdés:** Mit jelent a logikai kifejezés?
+    **Válasz:** A logikai kifejezés két értéket vehet fel: `true` (igaz) vagy `false` (hamis). [cite: 5]
+
+12. **Kérdés:** Mit határoznak meg az operátorok precedencia szintjei?
+    **Válasz:** Az operátorok precedencia szintjei meghatározzák a műveletek végrehajtási sorrendjét. [cite: 6]
+
+13. **Kérdés:** Mi a különbség a függvény deklarációja és definíciója között?
+    **Válasz:** A függvény deklarációja a függvény nevének, visszatérési típusának és paramétereinek megadása, míg a függvény definíciója a függvény törzsének (a végrehajtandó utasítások) megadása. [cite: 6]
+
+14. **Kérdés:** Mit nevezünk a függvény aláírásának?
+    **Válasz:** A függvény aláírása a függvény neve és a paramétereinek listája. [cite: 6]
+
+**Kifejezések, utasítások, blokkok, ciklusok, vezérlési szerkezetek, kivételkezelés, burkoló osztályok**
+
+1.  **Kérdés:** Mit nevezünk programblokknak?
+    **Válasz:** A programblokk egy kapcsos zárójelek (`{}`) közé zárt utasítássorozat. [cite: 7, 8]
+
+2.  **Kérdés:** Mit nevezünk kifejezésnek? Adjon példát\!
+    **Válasz:** A kifejezés egy változókból, operátorokból és metódushívásokból álló konstrukció, amely kiértékelhető egy értékké. Példa: `2 + 3 * 5`. [cite: 7, 8]
+
+3.  **Kérdés:** Mi az utasítás?
+    **Válasz:** Az utasítás a program egy végrehajtható egysége. [cite: 8]
+
+4.  **Kérdés:** Hogyan kell leírni a programblokkot Java-ban?
+    **Válasz:** Kapcsos zárójelekkel (`{}`) kell leírni Java-ban. [cite: 7, 8]
+
+5.  **Kérdés:** Milyen ciklusok érhetők el Java-ban?
+    **Válasz:** `while`, `do-while`, `for`, `foreach` [cite: 8]
+
+6.  **Kérdés:** Miért elöltesztelő ciklus a `while` ciklus?
+    **Válasz:** Mert a ciklusfeltétel a ciklusmag végrehajtása előtt kerül ellenőrzésre. [cite: 9]
+
+7.  **Kérdés:** Adjon példát egymásba ágyazott ciklusra\!
+    **Válasz:**
+
+    ```java
+    for (int i = 0; i < 10; i++) {
+     for (int j = 0; j < 5; j++) {
+      System.out.println("i: " + i + ", j: " + j);
+     }
+    }
+    ```
+
+8.  **Kérdés:** Mire szolgál a `foreach` ciklus? Adjon példát\!
+    **Válasz:** A `foreach` ciklus egy tömb vagy gyűjtemény elemein való iterálásra szolgál. Példa:
+
+    ```java
+    int[] numbers = {1, 2, 3, 4, 5};
+    for (int number : numbers) {
+     System.out.println(number);
+    }
+    ```
+
+    [cite: 9, 10]
+
+9.  **Kérdés:** Mik a Java vezérlési szerkezetei?
+    **Válasz:**
+
+      * Szekvencia
+      * Szelekció (`if`, `if-else`, `switch`)
+      * Iteráció (ciklusok) [cite: 10]
+
+10. **Kérdés:** Milyen lehetőségek vannak feltétel nélküli vezérlésátadásra?
+    **Válasz:** `break`, `continue`, `return` [cite: 10]
+
+11. **Kérdés:** Mire szolgál a `try-catch-finally` szerkezet? Adjon példát\!
+    **Válasz:** A `try-catch` szerkezet a kivételek kezelésére szolgál. A `finally` ág a `try` blokk után mindig lefut, akár történt kivétel, akár nem. Példa:
+
+    ```java
+    try {
+     // Kód, ami kivételt dobhat
+    } catch (ExceptionType e) {
+     // Kivételkezelés
+    } finally {
+     // Mindig lefutó kód
+    }
+    ```
+
+12. **Kérdés:** Lehet-e saját kivételt létrehozni? Ha igen, hogyan?
+    **Válasz:** Igen, a `Exception` vagy annak leszármazottjainak kiterjesztésével lehet létrehozni.
+
+13. **Kérdés:** A kivétel osztályok hierarchiájának csúcsán az `Object` osztály áll. Igaz vagy hamis?
+    **Válasz:** Hamis, a `Throwable` osztály áll a csúcson.
+
+14. **Kérdés:** Melyik kulcsszóval lehet a kivételeket továbbadni?
+    **Válasz:** A `throws` kulcsszóval.
+
+15. **Kérdés:** Mik a Java burkoló osztályai?
+    **Válasz:** A primitív típusok objektum reprezentációi: `Byte`, `Short`, `Integer`, `Long`, `Float`, `Double`, `Boolean`, `Character` [cite: 10]
+
+16. **Kérdés:** Soroljon fel néhány burkoló osztály metódust és adattagot\!
+    **Válasz:** `intValue()`, `parseDouble()`, `MAX_VALUE`, `MIN_VALUE` [cite: 10]
+
+**Adattípusok, String műveletek**
+
+1.  **Kérdés:** Melyek az egész számokat reprezentáló primitív típusok?
+    **Válasz:** `byte`, `short`, `int`, `long` [cite: 11]
+
+2.  **Kérdés:** Melyek a valós számokat reprezentáló primitív típusok?
+    **Válasz:** `float`, `double` [cite: 11]
+
+3.  **Kérdés:** Mi az a String pool?
+    **Válasz:** A String pool egy tárterület a heap-en belül, ahol a String literálok tárolódnak, ezzel optimalizálva a memóriahasználatot. [cite: 12]
+
+4.  **Kérdés:** Hogyan kerülnek a String-ek a String pool-ba?
+    **Válasz:** Manuálisan a `intern()` függvénnyel. [cite: 12]
+
+5.  **Kérdés:** Hogyan tudunk karaktert kiolvasni index alapján egy String-ből?
+    **Válasz:** `charAt()` [cite: 13]
+
+6.  **Kérdés:** Hogyan tudunk két String értékét összehasonlítani?
+    **Válasz:** `equals()` vagy `equalsIgnoreCase()` [cite: 13]
+
+7.  **Kérdés:** Hogyan tudunk String részletét megkapni indexek alapján?
+    **Válasz:** `substring()` [cite: 14]
+
+8.  **Kérdés:** Hogyan tudunk whitespace karaktereket törölni a String elejéről és végéről?
+    **Válasz:** `trim()` [cite: 14]
+
+9.  **Kérdés:** Hogyan tudunk String-et felbontani elválasztó szöveg mentén?
+    **Válasz:** `split()` [cite: 15]
+
+10. **Kérdés:** `switch-case` szerkezetnél a feltétel a switch-ben megadott változó lehet String típusú. Igaz vagy hamis?
+    **Válasz:** Igaz [cite: 16]
+
+11. **Kérdés:** Mely osztályok szolgálnak módosítható String-ek kezelésére?
+    **Válasz:** `StringBuilder` és `StringBuffer` [cite: 16]
+
+12. **Kérdés:** Mi a különbség a `String`, a `StringBuilder` és a `StringBuffer` között?
+    **Válasz:** A `String` nem módosítható (immutable), míg a `StringBuilder` és a `StringBuffer` módosítható. A `StringBuffer` szálbiztos, a `StringBuilder` nem. A `StringBuilder` általában gyorsabb. [cite: 17]
+
+**Objektumorientáltság, osztályok, interface-ek**
+
+1.  **Kérdés:** Mi az osztály és az objektum?
+    **Válasz:** Az osztály egy tervrajz vagy sablon, amely meghatározza az objektumok tulajdonságait és viselkedését. Az objektum az osztály egy példánya. [cite: 18]
+
+2.  **Kérdés:** Mik az objektumorientált programozás főbb alapelvei?
+    **Válasz:**
+
+      * Absztrakció
+      * Egységbe zárás (Encapsulation)
+      * Öröklődés (Inheritance)
+      * Többalakúság (Polymorphism) [cite: 18]
+
+3.  **Kérdés:** Mi a konstruktor? Milyen láthatósága lehet?
+    **Válasz:** A konstruktor az osztály egy speciális metódusa, amely az objektum létrehozásakor hívódik meg. A konstruktor láthatósága lehet `public`, `protected`, `private` vagy alapértelmezett (csomag szintű). [cite: 19]
+
+4.  **Kérdés:** Melyik kulcsszóval hozunk létre egy osztályból objektumot?
+    **Válasz:** A `new` kulcsszóval. [cite: 19]
+
+5.  **Kérdés:** Milyen hozzáférhetőségi szintek érhetők el a Java-ban?
+    **Válasz:**
+
+      * `public`
+      * `protected`
+      * alapértelmezett (csomag szintű)
+      * `private` [cite: 19]
+
+6.  **Kérdés:** Mi az automatikus szemétgyűjtés (garbage collection)?
+    **Válasz:** A nem használt objektumok által elfoglalt memória automatikus felszabadítása. [cite: 20]
+
+7.  **Kérdés:** Hány konstruktora lehet egy osztálynak?
+    **Válasz:** Tetszőleges számú, amennyiben a paramétereikben különböznek (metódus túlterhelés). [cite: 20]
+
+8.  **Kérdés:** Adjon példát saját osztály és objektum létrehozására\!
+    **Válasz:**
+
+    ```java
+    class Kutya {
+     String nev;
+     public Kutya(String nev) {
+      this.nev = nev;
+     }
+    }
+
+    Kutya rex = new Kutya("Rex");
+    ```
+
+9.  **Kérdés:** Adjon példát beágyazott osztályra\!
+    **Válasz:**
+
+    ```java
+    class Kulso {
+     class Belso {
+     }
+    }
+    ```
+
+    [cite: 20, 21]
+
+10. **Kérdés:** Mi a `this` és a `super` kulcsszó jelentése és használata?
+    **Válasz:** A `this` kulcsszó az aktuális objektumra való hivatkozást jelenti. A `super` kulcsszó a szülőosztályra való hivatkozást jelenti. A `this`-t a konstruktorokban vagy metódusokban használjuk, ha az osztály egy adattagjára akarunk hivatkozni, amelyet egy lokális változó vagy paraméter elfed. A `super`-t a szülőosztály konstruktorának hívására (`super()`) vagy a szülőosztály metódusának elérésére használjuk. [cite: 21]
+
+11. **Kérdés:** Mi a statikus változó/metódus? Mikor alkalmazható?
+    **Válasz:** A statikus változó/metódus az osztályhoz tartozik, nem az osztály egy példányához. Az osztály nevével érhető el. Akkor alkalmazható, ha az adott változó vagy metódus értéke/működése nem függ az objektum állapotától. [cite: 21]
+
+12. **Kérdés:** Mi az öröklődés? Hány szülőosztálya lehet egy osztálynak?
+    **Válasz:** Az öröklődés egy mechanizmus, amely lehetővé teszi, hogy egy osztály (leszármazott) átvegye egy másik osztály (ős) tulajdonságait és viselkedését. Egy osztálynak csak egy szülőosztálya lehet (egyszeres öröklődés). [cite: 21, 22]
+
+13. **Kérdés:** Mi az osztályhierarchia csúcsán lévő osztály neve?
+    **Válasz:** `Object` [cite: 22]
+
+14. **Kérdés:** Milyen metódusokat kapunk az `Object` osztálytól?
+    **Válasz:** `equals()`, `hashCode()`, `toString()`, `getClass()`, `notify()`, `notifyAll()`, `wait()` [cite: 22]
+
+15. **Kérdés:** Mi az interface? Mire használható?
+    **Válasz:** Az interface egy absztrakt típus, amely metódus deklarációkat tartalmaz, de nem tartalmaz implementációt (a Java 8-tól kezdve lehet default implementáció). Arra használható, hogy szerződést definiáljunk az osztályok számára. [cite: 23]
+
+16. **Kérdés:** Mi a kötelezettsége az interface metódusokat implementáló osztályoknak?
+    **Válasz:** Az interface metódusait kötelező megvalósítani. [cite: 23]
+
+17. **Kérdés:** Lehetséges
