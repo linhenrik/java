@@ -1,0 +1,91 @@
+Primitív típusok
+
+A Java-ban a primitív típusok előre definiált adattípusok, amelyek egy atomi, oszthatatlan értéket reprezentálnak.  A primitív típusok a következők: byte, short, int, long, float, double, char, boolean. 
+
+
+int: 32 bites egész számokat tárol. 
+long: 64 bites egész számokat tárol. 
+byte: 8 bites egész számokat tárol (-128-tól 127-ig). 
+short: 16 bites egész számokat tárol. 
+char: 16 bites előjel nélküli számábrázolás, Unicode karaktereket tárol. 
+float: 32 bites lebegőpontos számokat tárol. 
+double: 64 bites lebegőpontos számokat tárol. 
+boolean: true vagy false értékeket tárol. 
+StringBuilder, StringBuffer jellemzői
+
+A String nem módosítható, míg a StringBuffer és a StringBuilder tartalma megváltoztatható anélkül, hogy új objektum jönne létre. 
+
+A StringBuffer szálbiztos, míg a StringBuilder nem, de gyorsabb. 
+Mindkettő használható szöveg módosítására, beszúrására, törlésére. 
+Burkoló osztály típusok
+
+A Java-ban a burkoló osztályok lehetővé teszik, hogy a primitív típusokat objektumként kezeljük.  Ilyen burkoló osztályok például: Byte, Short, Integer, Long, Float, Double, Boolean, Character. 
+
+
+
+Feltétel nélküli vezérlésátadás
+
+A Java háromféle feltétel nélküli vezérlésátadást támogat: break, continue, return.  A break és a continue utasítások használhatók címkével vagy anélkül. 
+
+Break: A break utasítás a hozzá tartozó ciklus vagy switch utasítás végrehajtását azonnal befejezi. 
+Continue: A continue utasítás a ciklusmag hátralevő részének átugrására és a következő iterációra ugrásra szolgál. 
+Return: A return utasítás az aktuális metódusból vagy konstruktorból való kilépésre szolgál. 
+Gyűjtemény interfészek közti különbségek és jellemzői (Set, List, Map, Queue)
+
+A Java gyűjtemény keretrendszere interfészeket és azok implementációit tartalmazza. 
+
+Collection: A gyűjtemény hierarchia gyökere. 
+Set: Nem tartalmazhat duplikált elemeket. 
+List: Rendezett, tartalmazhat duplikált elemeket, indexelhető. 
+Queue: Feldolgozásra váró elemeket tárolja, FIFO (First-In-First-Out) elvű. 
+Map: Nem a Collection interfésztől származik. Kulcs-érték párokat tárol, a kulcsok nem lehetnek duplikáltak. 
+Gyűjtemények bejárása
+
+Gyűjteményeket bejárni for-each ciklussal, vagy iterátorokkal lehet.  Az iterátor egy objektum, amely lehetővé teszi a gyűjtemény bejárását és az elemek eltávolítását. 
+
+
+Tömbök, illetve azok másolása
+
+A tömb egy olyan változó, amely több azonos típusú adatot tartalmaz.  A tömb mérete a létrehozáskor rögzül.  Tömbök másolására használható az Arrays.copyOf() vagy a tömb clone() függvénye, illetve a System.arraycopy() metódus. 
+
+
+
+
+String leggyakrabban használt függvényei
+
+length(): Visszaadja a string hosszát. 
+equals(): Összehasonlít két stringet tartalom szerint. 
+compareTo(): Összehasonlít két stringet Unicode értékek alapján. 
+charAt(): Visszaadja a karaktert a megadott indexen. 
+indexOf(): Megadja egy karakter vagy szöveg első előfordulásának indexét a stringben. 
+lastIndexOf(): Megadja egy karakter vagy szöveg utolsó előfordulásának indexét a stringben. 
+substring(): Visszaadja a string egy részét. 
+trim(): Törli a whitespace karaktereket a string elejéről és végéről. 
+replace(): Karaktercserét valósít meg. 
+split(): A stringet egy adott elválasztó mentén több részre bontja. 
+join(): Több stringet fűz össze egy adott elválasztóval. 
+final
+
+A final kulcsszóval lehet egy változót véglegessé tenni, az értéke inicializálás után nem változtatható meg.  Osztályt is lehet final-nak jelölni, ilyenkor nem lehet belőle osztályt származtatni.  Metódust is lehet final-nak jelölni, ilyenkor nem lehet felülírni a leszármazott osztályban. 
+
+
+
+Hozzáférés-módosítók
+
+A hozzáférés-módosítók szabályozzák a változókhoz és metódusokhoz való hozzáférést.  A legfontosabbak:
+
+public: Mindenki számára elérhető. 
+protected: Az osztály, a leszármazott osztályai és az azonos csomagban lévő osztályok érhetik el. 
+
+private: Csak az adott osztályban érhető el. 
+Interfész
+
+Az interfész metódusok halmazát definiálja, de nem valósítja meg azokat.  Az interfészt megvalósító osztály implementálja a metódusokat.  Egy osztály több interfészt is megvalósíthat. 
+
+
+
+
+
+Adatbázis csatlakozáshoz és műveletekhez használt típusok
+
+A dokumentumok nem térnek ki részletesen az adatbázis csatlakozáshoz és műveletekhez használt típusokra (Connection, DriverManager, Statement, ResultSet, PreparedStatement). A "Java technológia" rész említi a JDBC-t, mint relációs adatbázis-kezelőkhöz elérési felületet. 
